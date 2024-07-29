@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONFAULTHANDLER=1
 
 # Apt installation
+RUN apt-get clean
 RUN apt-get update --fix-missing && \
     apt-get upgrade -y && \
     apt-get install -y -f --no-install-recommends \
@@ -34,6 +35,7 @@ ARG ENVIRONMENT=deployment
 
 # Apt installation
 # git: required by setuptools_scm.
+RUN apt-get clean
 RUN apt-get update -fix-missing && \
     apt-get upgrade -y -f && \
     apt-get install -y --no-install-recommends \
