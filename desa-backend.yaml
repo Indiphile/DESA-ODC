@@ -3,7 +3,7 @@ version: "3.8"
 services:
   desa-explorer:
     build:
-      context: /datacube-explorer
+      context: ./datacube-explorer
     ports:
       - 80:8080
     environment:
@@ -23,7 +23,7 @@ services:
 
   desa-sandbox:
     build:
-      context: /dea-sandbox/docker
+      context: ./dea-sandbox/docker
       args:
         - WITH_SUDO=yes
     environment:
@@ -38,7 +38,7 @@ services:
       - ./notebooks:/home/indiphile
   desa-maps:
     build:
-      context: /TerriaMap
+      context: ./TerriaMap
     ports: 
       - "3001:3001"
 
