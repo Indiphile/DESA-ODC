@@ -6,9 +6,9 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONFAULTHANDLER=1
 
 # Apt installation
-RUN apt-get update && \
+RUN apt-get update --fix-missing && \
     apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends \
+    apt-get install -f -y --no-install-recommends \
       build-essential \
       git \
       # For Psycopg2
