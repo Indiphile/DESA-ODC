@@ -1,0 +1,1 @@
+module.exports = 'post-prettier-402-gbcc99a0c (plus local modifications)';
