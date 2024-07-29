@@ -24,10 +24,9 @@ jobs:
 
       - name: Build and push Docker images from first Compose file
         run: |
-          docker-compose -f desa-backend.yaml build
-          docker-compose -f desa-backend.yaml push
+          docker-compose -f desa-backend.yaml up
 
       - name: Build and push Docker images from second Compose file
         run: |
-          docker-compose -f desa-backend.yaml build
-          docker-compose -f desa-frontend.yaml push
+          docker-compose -f desa-backend.yaml up
+          
