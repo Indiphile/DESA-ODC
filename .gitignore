@@ -1,5 +1,6 @@
-/desa-apps/backups/
-/desa-apps/config/
-/desa-apps/db_data/
-/desa-apps/.env
 
+/backups/
+/config/
+/db_data/
+.env
+/desa-apps/
