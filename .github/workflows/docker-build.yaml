@@ -23,13 +23,11 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push Docker images from first Compose file
-        uses: docker/compose-action@v2
-        with:
-          compose-file: desa-backend.yaml
-          push: true  # This will push the images to Docker Hub
+        run: |
+          docker-compose -f desa-backend.yaml build
+          docker-compose -f desa-backend.yaml push
 
       - name: Build and push Docker images from second Compose file
-        uses: docker/compose-action@v2
-        with:
-          compose-file: desa-frontend.yaml
-          push: true  # This will push the images to Docker Hub
+        run: |
+          docker-compose -f desa-backend.yaml build
+          docker-compose -f desa-frontend.yaml push
