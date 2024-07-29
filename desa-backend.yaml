@@ -27,7 +27,7 @@ services:
       args:
         - WITH_SUDO=yes
     environment:
-      AWS_NO_SIGN_REQUEST: true
+      AWS_NO_SIGN_REQUEST: "true"
       AWS_DEFAULT_REGION: ap-southeast-2
       DATACUBE_DB_URL: postgresql://${DB_USERNAME}:${PGDB_PASSWORD}@${DB_HOSTNAME}/${DB_DATABASE}
 
