@@ -3,7 +3,7 @@ version: "3.8"
 services:
   desa-explorer:
     image: indiphile/desa-explorer:latest
-    container_name: explorer
+    #container_name: explorer
     ports:
       - 80:8080
     environment:
@@ -23,7 +23,7 @@ services:
 
   desa-sandbox:
     image: indiphile/desa-sandbox:latest
-    container_name: sandbox
+    #container_name: sandbox
     environment:
       AWS_NO_SIGN_REQUEST: "true"
       AWS_DEFAULT_REGION: ap-southeast-2
@@ -36,12 +36,12 @@ services:
       - ./notebooks:/home/indiphile
   desa-maps:
     image: indiphile/desa-map:latest
-    container_name: map
+    #container_name: map
     ports: 
       - "3001:3001"
 
   desa-postgres:
-    container_name: postgres
+    #container_name: postgres
     image: indiphile/desa-postgres:latest
     hostname: "${DB_HOSTNAME}"
     environment:
@@ -69,7 +69,7 @@ services:
       retries: 10
 
   desa-pgadmin:
-    container_name: pgadmin
+    #container_name: pgadmin
     image: indiphile/desa-pgadmin:latest
     restart: always
     environment:
